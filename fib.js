@@ -17,22 +17,40 @@
 //     }
 
 let arr = [0];
-function fib(a){
-    let b = 0;
-    let c = 1;
-if (a > 0){
-    for (let i = 1; i < a; i++){
-        let d = b + c;
-        arr[i] = d;
-        if(i%2 == 1){
-            b = d;
-        }else{
-            c = d
-        }
+let fib = (a) => {
+  let erste = 0;
+  let sekunde = 1;
+  if (a > 1) {
+    for (let i = 2; i < a + 1; i++) {
+      let c = erste + sekunde;
+      arr[i - 1] = c;
+      if (i % 2 == 0) {
+        sekunde = c;
+      } else {
+        erste = c;
+      }
     }
-    console.log(arr);
-}else{
-    console.log(arr);
-}
-}
-fib(34);
+    return console.log(arr);
+  } else {
+    return console.log(arr);
+  }
+};
+// fib(34);
+fib(2);
+fib(3);
+fib(4);
+fib(5);
+fib(6);
+fib(7);
+fib(8);
+fib(9);
+fib(10);
+fib(11);
+fib(12);
+fib(13);
+fib(14);
+fib(15);
+fib(16);
+fib(17);
+fib(18);
+fib(19);
